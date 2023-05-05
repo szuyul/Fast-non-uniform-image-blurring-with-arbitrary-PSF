@@ -1,7 +1,7 @@
 # Fast-non-uniform-image-blurring-with-arbitrary-PSF
 Efficient method adopted from Astrophysics for image blurring with arbitrary PSF distribution
-For mathematical description on algorithm, see T. R. Lauer, “Deconvolution with a spatially-variant PSF,” in Proc. SPIE 4847, Astronomical Data Analysis II, (2002), pp. 167–173.
-Simply put, the user can arbitrarily define a spatial-variant MTF (interchangeable with the term "SFR", and is equivalent to PSF) distribution, SFR(k, x, y), of an incoherent imaging system, and observe the output image given an input scene (k is spatial freq., x and y are coordinates in the image space). The method orthogonalizes the spatial-variant PSF and uses global image operations for image blurring, rather than repetitive regional PSF convolution over the entire images. This allows an order of magnitude faster image processing.
+For mathematical description on algorithm, see [T. R. Lauer, “Deconvolution with a spatially-variant PSF”](https://arxiv.org/abs/astro-ph/0208247).
+Simply put, the user can arbitrarily define a spatial-variant MTF (interchangeable with the term "SFR", and is equivalent to PSF) distribution, SFR(k, x, y) of an incoherent imaging system, and observe the output image per input scene (k is spatial freq., x and y are coordinates in the image space). The method orthogonalizes the spatial-variant PSF and uses global image operations for efficient image blurring, rather than repetitive regional PSF convolution over the entire images. This allows an order of magnitude faster image processing.
 
 Here we describe few parameters in the demo script in more details:
 1. imager_SFR: a 3D array of shape (2, num_SFR_point, num_ROI) that specifies the spatial frequency in the first dimension, MTF score in the second dimension, and the index of a spatial location in the third dimension.
